@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Ejercicio 1</title>
+	</head>
+	<body>
+		<!-- Código JavaScript -->
+		<script>
+		function suma() {
+			let s = prompt("Ingrese dos números separados por comas: ");
+			console.log(s)
+			let a = parseInt(s.substring(0, s.indexOf(",")))
+			let b = parseInt(s.substring(s.indexOf(",")+1))
+			let c = a+b;
+			console.log("Los números ingresados son " + a + " y " + b);
+			alert(a + " + " + b + " = " + c);
+		}
+		suma();
+		</script>
+	</body>
+</html>
