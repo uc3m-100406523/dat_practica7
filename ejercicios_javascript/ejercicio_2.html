@@ -8,10 +8,23 @@
 		<script>
 		var resultado = confirm("¿Desea ver la sentencia \"switch\" en acción?");
 		if (resultado) {
-			alert("Has confirmado la acción.");
-			let n = parseInt(prompt("Ingrese un número del uno al tres: "));
-			// TODO: Añadir un switch para mostrar el número ingresado
-			alert("El número ingresado es: ");
+			let s = prompt("Ingrese un número del 1 al 3: ");
+			console.log(s);
+			let n = parseInt(s);
+			switch(n){
+			case 1:
+				alert("Has introducido el uno.");
+				break;
+			case 2:
+				alert("Has introducido el dos.");
+				break;
+			case 3:
+				alert("Has introducido el tres.");
+				break;
+			default:
+				alert("Error: el número introducido no estaba entre el 1 y el 3");
+				break;
+			}
 		} else {
 			alert("Has cancelado la acción.");
 		}
