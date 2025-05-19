@@ -4,6 +4,21 @@
 		<title>Ejercicio 5</title>
 	</head>
 	<body>
+		<div id="contenedor">
+			<span id="texto">Texto vacío</span>
+			<img id="html5" src="http://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/HTML5-logo.svg/120px-HTML5-logo.svg.png" />
+		</div>
 		<!-- Código JavaScript -->
+		<script>
+				function accesoDOM() {
+				var img = document.getElementById("html5");
+				img.src = "http://www.w3.org/Icons/w3c_home.png";
+				var txt = document.getElementById("texto");
+				txt.innerHTML = "Texto modificado";
+				txt.style.backgroundColor = "#333";
+				}
+
+				accesoDOM();
+		</script>
 	</body>
 </html>
