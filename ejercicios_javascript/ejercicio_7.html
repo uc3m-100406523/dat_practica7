@@ -4,6 +4,64 @@
 		<title>Ejercicio 7</title>
 	</head>
 	<body>
+		<form action="#" method="POST" id="formulario">
+		<div class="field">
+			<label for="usuario">Usuario:<em>*</em></label>
+			<input type="text" id="usuario" name="usuario" />
+		</div>
+		<div class="field">
+			<label for="contrasena">Contraseña:<em>*</em></label>
+			<input type="password" id="contrasena" name="contrasena" />
+		</div>
+		<div class="field">
+			<label for="nombre">Nombre:</label>
+			<input type="text" id="nombre" name="nombre" />
+		</div>
+		<div class="buttons">
+			<input type="submit" id="registro" value="Registro" />
+		</div>
+		<input type="hidden" name="accion" value="agregar" />
+		</form>
+		<table id="usuarios">
+		<tr>
+			<th>Usuario</th>
+			<th>Nombre</th>
+		</tr>
+		</table>
 		<!-- Código JavaScript -->
+		<script>
+		function registro(){
+			var Usuario = document.getElementById('usuario').value;
+			var Contrasena = document.getElementById('contrasena').value;
+			var Nombre = document.getElementById('nombre').value;
+			
+			if(!Usuario || !Contrasena){
+			alert("Es obligatorio introducir usuario y contraseña");
+			error = true;
+			if(!Usuario){
+				document.getElementById('usuario').style.backgroundColor = "#E77";
+			}
+			if(!Contrasena){
+				document.getElementById('contrasena').style.backgroundColor = "#E77";
+			}
+			}
+			else{
+			let t = document.getElementById('usuarios');
+			
+			// Create an empty <tr> element and add it to the 1st position of the table:
+			var row = t.insertRow(0);
+			
+			// Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
+			var cell1 = row.insertCell(0);
+			var cell2 = row.insertCell(1);
+			
+			// Add some text to the new cells:
+			cell1.innerHTML = Usuario;
+			cell2.innerHTML = Nombre;
+			}
+		}
+		// Se llama a preventDefault para evitar que al hacer click en el botón se carguen páginas. Sustituye esta función por la función registro que codifiques
+		document.getElementById('formulario').addEventListener('submit', registro, false);
+		</script>
 	</body>
 </html>
