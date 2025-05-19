@@ -5,5 +5,17 @@
 	</head>
 	<body>
 		<!-- Código JavaScript -->
+		<script>
+		function sumatoria(nombre, lista){
+			result = 0;
+			for(let i=0;i<lista.length;i++){
+			result=result+lista[i];
+			}
+			return {"nombre": nombre, "suma": result};
+		}
+		
+		let sum = sumatoria("inicial", [1, 2, 3]);
+		console.log(sum);
+		</script>
 	</body>
 </html>
